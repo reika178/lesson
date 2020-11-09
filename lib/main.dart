@@ -129,6 +129,14 @@ class _MyHomePageState extends State<MyHomePage> {
                     ],
                   ),
                 ),
+                Text('ドリル③角丸ContainerとColumn'),
+                Container(
+                  width: 300,
+                  height: 200,
+                  decoration: BoxDecoration(
+                    border: Border.all(color: Colors.black),
+                  )
+                ),
               ]
             ),
           ],
