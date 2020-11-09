@@ -48,6 +48,9 @@ class _MyHomePageState extends State<MyHomePage> {
             Text(
               'ドリルスタート！',
             ),
+            Text(
+              '問題①Rowで横に並べる',
+            ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: <Widget>[
@@ -77,6 +80,56 @@ class _MyHomePageState extends State<MyHomePage> {
                   color: Colors.red,
                 ),
               ],
+            ),
+            Text(
+              '問題②RowとColumnの組み合わせ',
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Container(
+                  padding: EdgeInsets.all(20),
+                  color: Colors.amber,
+                  child: Column(
+                    children: [
+                      Container(
+                        width: 100,
+                        height: 100,
+                        color: Colors.red,
+                      ),
+                      SizedBox(
+                        height: 20,
+                      ),
+                      Container(
+                        width: 100,
+                        height: 100,
+                        color: Colors.red,
+                      ),
+                    ],
+                  ),
+                ),
+                Container(
+                  padding: EdgeInsets.all(20),
+                  color: Colors.amber,
+                  child: Column(
+                    children: [
+                      Container(
+                        width: 100,
+                        height: 100,
+                        color: Colors.red,
+                      ),
+                      SizedBox(
+                        height: 20,
+                      ),
+                      Container(
+                        width: 100,
+                        height: 100,
+                        color: Colors.red,
+                      ),
+                    ],
+                  ),
+                ),
+              ]
             ),
           ],
         ),
