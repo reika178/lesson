@@ -129,15 +129,48 @@ class _MyHomePageState extends State<MyHomePage> {
                     ],
                   ),
                 ),
-                Text('ドリル③角丸ContainerとColumn'),
-                Container(
-                  width: 300,
-                  height: 200,
-                  decoration: BoxDecoration(
-                    border: Border.all(color: Colors.black),
-                  )
-                ),
               ]
+            ),
+            Text('ドリル③角丸ContainerとColumn'),
+            Container(
+              width: 300,
+              height: 200,
+              padding: EdgeInsets.all(20),
+              decoration: BoxDecoration(
+                border: Border.all(color: Colors.black),
+                borderRadius: BorderRadius.circular(10),
+              ),
+              child: Column(
+                children: <Widget>[
+                  Text('お名前'),
+                  Container(
+                    width: 200,
+                    height: 50,
+                    decoration: BoxDecoration(
+                      border: Border.all(color: Colors.black),
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                    child: TextFormField(),
+                  ),
+                  SizedBox(
+                    height: 20,
+                  ),
+                  Container(
+                    // height: 30,
+                    padding: EdgeInsets.symmetric(horizontal: 12),
+                    width: 150,
+                    decoration: BoxDecoration(
+                      color: Colors.blue,
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                    child: Text(
+                      '送信',
+                      textAlign: TextAlign.center,
+                      style: TextStyle(color: Colors.white),
+                      ),
+                  ),
+                ],
+              ),
             ),
           ],
         ),
