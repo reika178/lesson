@@ -136,7 +136,7 @@ class _MyHomePageState extends State<MyHomePage> {
               children: [
                 Container(
                   width: 300,
-                  height: 200,
+                  margin: EdgeInsets.all(24),
                   padding: EdgeInsets.all(20),
                   decoration: BoxDecoration(
                     border: Border.all(color: Colors.black),
@@ -172,6 +172,22 @@ class _MyHomePageState extends State<MyHomePage> {
                           ),
                       ),
                     ],
+                  ),
+                ),
+                Positioned(
+                  right: 4,
+                  top: 4,
+                  child: Container(
+                    width: 35,
+                    height: 35,
+                    decoration: BoxDecoration(
+                      color: Colors.blue,
+                      shape: BoxShape.circle,
+                    ),
+                    child: Icon(
+                      Icons.close,
+                      color: Colors.white,
+                    ),
                   ),
                 ),
               ],
