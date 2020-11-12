@@ -194,16 +194,86 @@ class _MyHomePageState extends State<MyHomePage> {
                 ],
               ),
               Text('ドリル⑤画像表示とあるあるリスト'),
-              Image(
-                image: AssetImage('images/babi2.jpeg')
+              Container(
+                margin: EdgeInsets.symmetric(horizontal: 12),
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.black,
+                      spreadRadius: 1,
+                      blurRadius: 10,
+                      offset: Offset(10,10),
+                    ),
+                  ],
+                  border: Border.all(color: Colors.black),
+                  borderRadius: BorderRadius.circular(10),
+                ),
+                child: Row(
+                  children: [
+                    Container(
+                      width: 120,
+                      height: 140,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(10),
+                        image: DecorationImage(
+                          fit: BoxFit.cover,
+                          image: AssetImage('images/babi2.jpeg'),
+                        ),
+                      ),
+                    ),
+                    const SizedBox(
+                      width: 10,
+                    ),
+                    Expanded(
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text('バービー'),
+                          Text(
+                            'こんな体型になるのだ！',
+                            style: const TextStyle(
+                              fontSize: 16,
+                            ),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.symmetric(vertical: 4),
+                            child: Row(
+                              children: [
+                                SizedBox(
+                                  width: 24,
+                                  child: Icon(Icons.network_check)
+                                ),
+                                Text(
+                                  '食べ物は程々に',
+                                  style: const TextStyle(
+                                    fontSize: 12,
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                          Row(
+                            children: [
+                              SizedBox(
+                                width: 24,
+                                child: Icon(Icons.account_circle),
+                              ),
+                              Text(
+                                '運動はたくさん',
+                                style: const TextStyle(
+                                  fontSize: 12,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
               ),
-              // Row(
-              //   children : [
-              //     Container(
-              //       Image.asset('images/babi2.jpeg'),
-              //     ),
-              //   ],
-              // ),
             ],
           ),
         ),
