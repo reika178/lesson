@@ -41,158 +41,171 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         title: Text(widget.title),
       ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Text(
-              'ドリルスタート！',
-            ),
-            Text(
-              '問題①Rowで横に並べる',
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: <Widget>[
-                Container(
-                  height: 100,
-                  width: 100,
-                  color: Colors.black,
-                ),
-                Container(
-                  height: 100,
-                  width: 100,
-                  color: Colors.black,
-                ),
-              ],
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: <Widget>[
-                Container(
-                  height: 100,
-                  width: 100,
-                  color: Colors.red,
-                ),
-                Container(
-                  height: 100,
-                  width: 100,
-                  color: Colors.red,
-                ),
-              ],
-            ),
-            Text(
-              '問題②RowとColumnの組み合わせ',
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Container(
-                  padding: EdgeInsets.all(20),
-                  color: Colors.amber,
-                  child: Column(
-                    children: [
-                      Container(
-                        width: 100,
-                        height: 100,
-                        color: Colors.red,
-                      ),
-                      SizedBox(
-                        height: 20,
-                      ),
-                      Container(
-                        width: 100,
-                        height: 100,
-                        color: Colors.red,
-                      ),
-                    ],
+      body: SingleChildScrollView(
+        child: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              Text(
+                'ドリルスタート！',
+              ),
+              Text(
+                '問題①Rowで横に並べる',
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: <Widget>[
+                  Container(
+                    height: 100,
+                    width: 100,
+                    color: Colors.black,
                   ),
-                ),
-                Container(
-                  padding: EdgeInsets.all(20),
-                  color: Colors.amber,
-                  child: Column(
-                    children: [
-                      Container(
-                        width: 100,
-                        height: 100,
-                        color: Colors.red,
-                      ),
-                      SizedBox(
-                        height: 20,
-                      ),
-                      Container(
-                        width: 100,
-                        height: 100,
-                        color: Colors.red,
-                      ),
-                    ],
+                  Container(
+                    height: 100,
+                    width: 100,
+                    color: Colors.black,
                   ),
-                ),
-              ]
-            ),
-            Text('ドリル④丸とStack'),
-            Stack(
-              children: [
-                Container(
-                  width: 300,
-                  margin: EdgeInsets.all(24),
-                  padding: EdgeInsets.all(20),
-                  decoration: BoxDecoration(
-                    border: Border.all(color: Colors.black),
-                    borderRadius: BorderRadius.circular(10),
+                ],
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: <Widget>[
+                  Container(
+                    height: 100,
+                    width: 100,
+                    color: Colors.red,
                   ),
-                  child: Column(
-                    children: <Widget>[
-                      Text('お名前'),
-                      Container(
-                        width: 200,
-                        height: 50,
-                        decoration: BoxDecoration(
-                          border: Border.all(color: Colors.black),
-                          borderRadius: BorderRadius.circular(10),
+                  Container(
+                    height: 100,
+                    width: 100,
+                    color: Colors.red,
+                  ),
+                ],
+              ),
+              Text(
+                '問題②RowとColumnの組み合わせ',
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Container(
+                    padding: EdgeInsets.all(20),
+                    color: Colors.amber,
+                    child: Column(
+                      children: [
+                        Container(
+                          width: 100,
+                          height: 100,
+                          color: Colors.red,
                         ),
-                        child: TextFormField(),
-                      ),
-                      SizedBox(
-                        height: 20,
-                      ),
-                      Container(
-                        // height: 30,
-                        padding: EdgeInsets.symmetric(horizontal: 12),
-                        width: 150,
-                        decoration: BoxDecoration(
-                          color: Colors.blue,
-                          borderRadius: BorderRadius.circular(10),
+                        SizedBox(
+                          height: 20,
                         ),
-                        child: Text(
-                          '送信',
-                          textAlign: TextAlign.center,
-                          style: TextStyle(color: Colors.white),
-                          ),
-                      ),
-                    ],
+                        Container(
+                          width: 100,
+                          height: 100,
+                          color: Colors.red,
+                        ),
+                      ],
+                    ),
                   ),
-                ),
-                Positioned(
-                  right: 4,
-                  top: 4,
-                  child: Container(
-                    width: 35,
-                    height: 35,
+                  Container(
+                    padding: EdgeInsets.all(20),
+                    color: Colors.amber,
+                    child: Column(
+                      children: [
+                        Container(
+                          width: 100,
+                          height: 100,
+                          color: Colors.red,
+                        ),
+                        SizedBox(
+                          height: 20,
+                        ),
+                        Container(
+                          width: 100,
+                          height: 100,
+                          color: Colors.red,
+                        ),
+                      ],
+                    ),
+                  ),
+                ]
+              ),
+              Text('ドリル④丸とStack'),
+              Stack(
+                children: [
+                  Container(
+                    width: 300,
+                    margin: EdgeInsets.all(24),
+                    padding: EdgeInsets.all(20),
                     decoration: BoxDecoration(
-                      color: Colors.blue,
-                      shape: BoxShape.circle,
+                      border: Border.all(color: Colors.black),
+                      borderRadius: BorderRadius.circular(10),
                     ),
-                    child: Icon(
-                      Icons.close,
-                      color: Colors.white,
+                    child: Column(
+                      children: <Widget>[
+                        Text('お名前'),
+                        Container(
+                          width: 200,
+                          height: 50,
+                          decoration: BoxDecoration(
+                            border: Border.all(color: Colors.black),
+                            borderRadius: BorderRadius.circular(10),
+                          ),
+                          child: TextFormField(),
+                        ),
+                        SizedBox(
+                          height: 20,
+                        ),
+                        Container(
+                          // height: 30,
+                          padding: EdgeInsets.symmetric(horizontal: 12),
+                          width: 150,
+                          decoration: BoxDecoration(
+                            color: Colors.blue,
+                            borderRadius: BorderRadius.circular(10),
+                          ),
+                          child: Text(
+                            '送信',
+                            textAlign: TextAlign.center,
+                            style: TextStyle(color: Colors.white),
+                            ),
+                        ),
+                      ],
                     ),
                   ),
-                ),
-              ],
-            ),
-          ],
+                  Positioned(
+                    right: 4,
+                    top: 4,
+                    child: Container(
+                      width: 35,
+                      height: 35,
+                      decoration: BoxDecoration(
+                        color: Colors.blue,
+                        shape: BoxShape.circle,
+                      ),
+                      child: Icon(
+                        Icons.close,
+                        color: Colors.white,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+              Text('ドリル⑤画像表示とあるあるリスト'),
+              Image(
+                image: AssetImage('images/babi2.jpeg')
+              ),
+              // Row(
+              //   children : [
+              //     Container(
+              //       Image.asset('images/babi2.jpeg'),
+              //     ),
+              //   ],
+              // ),
+            ],
+          ),
         ),
       ),
       floatingActionButton: FloatingActionButton(
