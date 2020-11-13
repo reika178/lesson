@@ -88,6 +88,10 @@ class WeightCard extends StatelessWidget {
                     ],
                   ),
                 ),
+                Icon(Icons.delete),
+                SizedBox(width: 10),
+                Icon(Icons.pending),
+                SizedBox(width: 10),
               ],
             ),
           );
